@@ -29,6 +29,7 @@ public class RecursiveBinarySearch {
         }
     }
 
+    /* Method to generate array using any amount of specified elements */
     public static int[] generateArray(int elementnumber) {
     	int[] array = new int[elementnumber];
     	
