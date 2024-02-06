@@ -30,12 +30,13 @@ public class IterativeBinarySearch {
         }
         return -1;
     }
-    
+
+    /* Method to generate array using any amount of specified elements */ 
     public static int[] generateArray(int elementnumber) {
     	int[] array = new int[elementnumber];
     	
     	for (int i = 0; i < array.length; i++) {
-    		array[i] = i;	
+    		array[i] = i;	// Populate array 
     	}
     	
     	return array;
