@@ -51,6 +51,7 @@ public class Assignment2 {
         int[] tmparr = new int[arr.length];
         int sortedIndex = 1;
 
+       // Sort the Array in descending order 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
@@ -61,6 +62,7 @@ public class Assignment2 {
             }
         }
 
+       // Remove duplicates
         tmparr[0] = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] != arr[i-1]) {
