@@ -94,7 +94,15 @@ public class Assignment2 {
 
         // Print the final array
         for (int i = 0; i < ex2_array.length; i++) {
-            System.out.println(ex2_array[i]);
+            if(i==0) {
+                System.out.print("[" + ex2_array[i]);
+            }
+            else if(i==ex2_array.length - 1) {
+                System.out.print("," + ex2_array[i]+"]");
+            }
+            else {
+                System.out.print("," + ex2_array[i]);
+            }
         }
 
     }
