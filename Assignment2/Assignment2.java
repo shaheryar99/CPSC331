@@ -5,8 +5,6 @@
 * TA: Harnoor Khehra 
 */
 
- import java.util.Arrays;
-
 public class Assignment2 {
 
     /* Exercise 2 - Step 1 */
