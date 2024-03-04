@@ -1,5 +1,5 @@
 /**
-* Assignment 2 - Shaheryar Syed 
+* Assignment 2 Exercise 2 - Shaheryar Syed 
 * CPSC 331 
 * UCID: 30052162
 * TA: Harnoor Khehra 
