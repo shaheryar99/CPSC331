@@ -6,7 +6,7 @@
 */
 
 public class StackImplemention {
-    private int arraySize;
+    int arraySize;
     private int[] intArray;
     private int arrayTop;
 
@@ -35,16 +35,17 @@ public class StackImplemention {
         }
     }
 
-    public void pop() {
+    public int pop() {
         if(isEmpty()) {
             System.out.println("My g... Stack's empty fr fr.");
+            return -1;
         }
         else {
             int poppedelement;
             poppedelement = intArray[arrayTop];
             intArray[arrayTop] = 0;
             arrayTop--;
-            System.out.println("I gotchu. Just sent: " + poppedelement + " to the ends yk, it aint coming back.");
+            return poppedelement;
         }
     }
 
@@ -55,5 +56,23 @@ public class StackImplemention {
         else {
             System.out.println(intArray[arrayTop]);
         }
+    }
+
+    public void showFullStack() {
+        for(int i = 0; i < arraySize; i++) {
+            if (i==0) {
+                System.out.print("[");
+            }
+            if(i==arraySize-1) {
+                System.out.print(intArray[arraySize-i-1] + "]");
+            }
+            else {
+                System.out.print(intArray[arraySize-i-1]+ " - ");
+            }
+        }
+    }
+
+    public int returnSingle(int i) {
+        return intArray[arrayTop - i];
     }
 }

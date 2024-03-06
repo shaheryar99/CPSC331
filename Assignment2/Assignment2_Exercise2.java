@@ -128,19 +128,6 @@ public class Assignment2_Exercise2 {
 
         // Method for Exercise 2 Step 3
         ex2_array = exercise2_3(ex2_array);
-        System.out.print("Exercise 2, Step 3: ");
-        for (int i = 0; i < ex2_array.length; i++) {
-            if(i==0) {
-                System.out.print("[" + ex2_array[i]);
-            }
-            else if(i==ex2_array.length - 1) {
-                System.out.print("," + ex2_array[i]+"]");
-            }
-            else {
-                System.out.print("," + ex2_array[i]);
-            }
-        }
-        System.out.println();
 
         // Print the final array
         System.out.print("Exercise 2, Final Array: ");
