@@ -80,17 +80,70 @@ public class Assignment2 {
 
         // Initial Array
         int[] ex2_array = {3,15,0,18,4,10,2,5,25};
+        System.out.print("Initial Array: ");
+        for (int i = 0; i < ex2_array.length; i++) {
+            if(i==0) {
+                System.out.print("[" + ex2_array[i]);
+            }
+            else if(i==ex2_array.length - 1) {
+                System.out.print("," + ex2_array[i]+"]");
+            }
+            else {
+                System.out.print("," + ex2_array[i]);
+            }
+        }
+        System.out.println();
 
         // Method for Exercise 2 Step 1
         ex2_array = exercise2_1(ex2_array);
+        System.out.print("Exercise 2, Step 1: ");
+        for (int i = 0; i < ex2_array.length; i++) {
+            if(i==0) {
+                System.out.print("[" + ex2_array[i]);
+            }
+            else if(i==ex2_array.length - 1) {
+                System.out.print("," + ex2_array[i]+"]");
+            }
+            else {
+                System.out.print("," + ex2_array[i]);
+            }
+        }
+        System.out.println();
 
         // Method for Exercise 2 Step 2
         ex2_array = exercise2_2(ex2_array);
+        System.out.print("Exercise 2, Step 2: ");
+        for (int i = 0; i < ex2_array.length; i++) {
+            if(i==0) {
+                System.out.print("[" + ex2_array[i]);
+            }
+            else if(i==ex2_array.length - 1) {
+                System.out.print("," + ex2_array[i]+"]");
+            }
+            else {
+                System.out.print("," + ex2_array[i]);
+            }
+        }
+        System.out.println();
 
         // Method for Exercise 2 Step 3
         ex2_array = exercise2_3(ex2_array);
+        System.out.print("Exercise 2, Step 3: ");
+        for (int i = 0; i < ex2_array.length; i++) {
+            if(i==0) {
+                System.out.print("[" + ex2_array[i]);
+            }
+            else if(i==ex2_array.length - 1) {
+                System.out.print("," + ex2_array[i]+"]");
+            }
+            else {
+                System.out.print("," + ex2_array[i]);
+            }
+        }
+        System.out.println();
 
         // Print the final array
+        System.out.print("Exercise 2, Final Array: ");
         for (int i = 0; i < ex2_array.length; i++) {
             if(i==0) {
                 System.out.print("[" + ex2_array[i]);
