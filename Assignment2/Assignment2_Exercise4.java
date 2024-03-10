@@ -57,6 +57,7 @@ public class Assignment2_Exercise4<T> {
 
         Assignment2_Exercise4 shoppingCart = new Assignment2_Exercise4<>();
 
+        /* Why is a single pair worth more than my most expensive outfit?? */
         dictionary[0] = new TupleGenerator("Nike", 450, 15);
         dictionary[1] = new TupleGenerator("Adidas",400,10);
         dictionary[2] = new TupleGenerator("Puma", 600, 30);
@@ -65,10 +66,14 @@ public class Assignment2_Exercise4<T> {
         dictionary[5] = new TupleGenerator("Skechers", 390, 0);
 
         shoppingCart.push(dictionary[0]);
+
+        /* checks over stripes BABYYYY */
         TupleGenerator nike = dictionary[0];
 
+        /* petition to not have to do this math */
         double prevShoeDiscountedPrice = dictionary[0].getShoePrice() * (1-((double)dictionary[0].getShoeDiscount()/(100)));
         System.out.println("1st Step: " + shoppingCart.peek());
+
 
         for (int i = 1; i < dictionary.length; i++) {
 
@@ -86,6 +91,7 @@ public class Assignment2_Exercise4<T> {
                 System.out.print((i+1) + "th" + " Step: ");
             }
 
+            /* Cheapest pair still worth more than my outfits */
             if (nextShoeDiscountedPrice < prevShoeDiscountedPrice) {
                 TupleGenerator cart = shoppingCart.pop();
                 int price = cart.getShoePrice();
@@ -95,11 +101,17 @@ public class Assignment2_Exercise4<T> {
                 prevShoeDiscountedPrice = nextShoeDiscountedPrice;
 
             }
+
+            /* Obviously I'm a bargin hunter. No discount = no purchase */
             else if(nextShoeDiscountedPrice == prevShoeDiscountedPrice) {
                 double priceEquals = currentitem.getShoePrice() *  (1-((double)currentitem.getShoeDiscount()/(100))); 
                 String brand = shoppingCart.shoppingCartBrand();
-                shoppingCart.pop();
-                shoppingCart.push(currentitem);
+
+                if (currentitem.getShoeDiscount() == 0) {;}
+                else {
+                    shoppingCart.pop();
+                    shoppingCart.push(currentitem);
+                }
 
                 System.out.println(shoppingCart.peek() + " as " + currentitem.getShoePrice() + " X " + currentitem.getShoeDiscount() + " percent = " + (int)nextShoeDiscountedPrice + " = " + (int)priceEquals + " and " + "\'" + brand + "\'" + " has a discount");
             }
