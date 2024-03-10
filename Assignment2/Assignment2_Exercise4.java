@@ -17,7 +17,7 @@ public class Assignment2_Exercise4<T> {
 
     public void push (TupleGenerator tuple) {
         if(topPointer == dictionary.length -1) {
-            System.out.println("The stack is so full, it's like my laundry basket on a Sunday night—optimistically thinking one more shirt won't hurt.");
+            System.out.println("The stack is so full, it wants to get into the storage unit business");
         }
         else {
             topPointer++;
@@ -80,6 +80,7 @@ public class Assignment2_Exercise4<T> {
             TupleGenerator currentitem = dictionary[i];
             double nextShoeDiscountedPrice = currentitem.getShoePrice() *  (1-((double)currentitem.getShoeDiscount()/(100))); 
 
+            /* Because some genius in 1883 decided ordinal numbers should be a thing... its on sight. */
             if (i == 1) {
                 System.out.print("2nd Step: ");
             }
