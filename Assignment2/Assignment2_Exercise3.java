@@ -8,6 +8,7 @@
 
 public class Assignment2_Exercise3 {
 
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
        
         /* Generate Stack */
