@@ -5,12 +5,12 @@
 * TA: Harnoor Khehra 
 */
 
-public class StackImplemention<T> {
+public class StackImplemention {
     int arraySize;
     private int[] intArray;
     private int arrayTop;
 
-    public StackImplemention(T size) {
+    public StackImplemention(int size) {
         arraySize = (int) size;
         intArray = new int[(int) size];
         arrayTop = -1;
@@ -24,7 +24,7 @@ public class StackImplemention<T> {
         return (arrayTop == arraySize - 1);
     }
 
-    public void push(T value) {
+    public void push(int value) {
 
         if (isFull()) {
             System.out.println("Yo big dawg, on moms, stack full fam.");
@@ -76,5 +76,34 @@ public class StackImplemention<T> {
 
     public int returnSingle(int i) {
         return intArray[arrayTop - i];
+    }
+
+    public int[] seeElements() {
+
+        int nonzero = 0;
+        int[] zeroarray = new int[0];
+
+        if (isEmpty()) {
+            return zeroarray;
+        }
+
+        else {
+
+            for (int i = 0; i < arraySize; i++) {
+                if(intArray[i] != 0) {
+                    nonzero++;
+                }
+            }
+    
+            int[] nonzeroarray = new int[nonzero];
+    
+            for (int j = 0; j < arraySize; j++) {
+                if (intArray[j] != 0) {
+                    nonzeroarray[j] = intArray[j];
+                }
+            }
+            return nonzeroarray;
+        }
+
     }
 }
