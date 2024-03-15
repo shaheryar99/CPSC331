@@ -67,6 +67,17 @@ public class Assignment2_Exercise4<T> {
 
         shoppingCart.push(dictionary[0]);
 
+        System.out.print("Shoes info: ");
+        for(int i = 0; i < dictionary.length; i++) {
+            if (i==5) {
+                System.out.print("(" + "\'" + dictionary[i].getShoeBrand() + "\'" + ", " + dictionary[i].getShoePrice() + ", " + dictionary[i].getShoeDiscount() + ")");
+            }
+            else {
+                System.out.print("(" + "\'" + dictionary[i].getShoeBrand() + "\'" + ", " + dictionary[i].getShoePrice() + ", " + dictionary[i].getShoeDiscount() + ")" + ", ");
+            }
+        }
+
+        System.out.println();
         /* checks over stripes BABYYYY */
         TupleGenerator nike = dictionary[0];
 
@@ -95,10 +106,9 @@ public class Assignment2_Exercise4<T> {
             /* Cheapest pair still worth more than my outfits */
             if (nextShoeDiscountedPrice < prevShoeDiscountedPrice) {
                 TupleGenerator cart = shoppingCart.pop();
-                int price = cart.getShoePrice();
 
                 shoppingCart.push(currentitem);
-                System.out.println(shoppingCart.peek() + " as " + currentitem.getShoePrice() + " X " + currentitem.getShoeDiscount() + " percent = " + (int)nextShoeDiscountedPrice + " is less than " + price);
+                System.out.println(shoppingCart.peek() + " as " + currentitem.getShoePrice() + " X " + currentitem.getShoeDiscount() + " percent = " + (int)nextShoeDiscountedPrice + " is less than " + (int)prevShoeDiscountedPrice);
                 prevShoeDiscountedPrice = nextShoeDiscountedPrice;
 
             }

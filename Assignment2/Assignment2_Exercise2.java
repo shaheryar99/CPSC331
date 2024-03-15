@@ -80,7 +80,8 @@ public class Assignment2_Exercise2 {
 
         // Initial Array
         int[] ex2_array = {3,15,0,18,4,10,2,5,25};
-        System.out.print("Initial Array: ");
+        System.out.println("Step-1: ");
+        System.out.print("Initial queue - ");
         for (int i = 0; i < ex2_array.length; i++) {
             if(i==0) {
                 System.out.print("[" + ex2_array[i]);
@@ -96,7 +97,22 @@ public class Assignment2_Exercise2 {
 
         // Method for Exercise 2 Step 1
         ex2_array = exercise2_1(ex2_array);
-        System.out.print("Exercise 2, Step 1: ");
+        System.out.print("Updated Queue - ");
+        for (int i = 0; i < ex2_array.length; i++) {
+            if(i==0) {
+                System.out.print("[" + ex2_array[i]);
+            }
+            else if(i==ex2_array.length - 1) {
+                System.out.print("," + ex2_array[i]+"]");
+            }
+            else {
+                System.out.print("," + ex2_array[i]);
+            }
+        }
+        System.out.println();
+        System.out.println("Step-2: ");
+
+        System.out.print("Initial Queue - ");
         for (int i = 0; i < ex2_array.length; i++) {
             if(i==0) {
                 System.out.print("[" + ex2_array[i]);
@@ -112,7 +128,7 @@ public class Assignment2_Exercise2 {
 
         // Method for Exercise 2 Step 2
         ex2_array = exercise2_2(ex2_array);
-        System.out.print("Exercise 2, Step 2: ");
+        System.out.print("Updated queue (after division) - ");
         for (int i = 0; i < ex2_array.length; i++) {
             if(i==0) {
                 System.out.print("[" + ex2_array[i]);
@@ -125,12 +141,27 @@ public class Assignment2_Exercise2 {
             }
         }
         System.out.println();
+        System.out.println("Step-3: ");
+        System.out.print("Updated queue (after division) - ");
+        for (int i = 0; i < ex2_array.length; i++) {
+            if(i==0) {
+                System.out.print("[" + ex2_array[i]);
+            }
+            else if(i==ex2_array.length - 1) {
+                System.out.print("," + ex2_array[i]+"]");
+            }
+            else {
+                System.out.print("," + ex2_array[i]);
+            }
+        }
+
+        System.out.println();
 
         // Method for Exercise 2 Step 3
         ex2_array = exercise2_3(ex2_array);
 
         // Print the final array
-        System.out.print("Exercise 2, Final Array: ");
+        System.out.print("Updated queue (after sorting) - ");
         for (int i = 0; i < ex2_array.length; i++) {
             if(i==0) {
                 System.out.print("[" + ex2_array[i]);
