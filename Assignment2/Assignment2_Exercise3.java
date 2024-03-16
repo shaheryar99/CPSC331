@@ -45,7 +45,7 @@ public class Assignment2_Exercise3 {
         }
         System.out.println();
 
-        System.out.print("Reversed Stack: ");
+        System.out.print("Output Reversed Stack: ");
         stacker.showFullStack();
 
         /* Generate Unique Queue */
@@ -76,7 +76,7 @@ public class Assignment2_Exercise3 {
         }
 
         System.out.println();
-        System.out.print("Queue with Unique values: ");
+        System.out.print("Output Queue with unique values: ");
         uniqueQueue.showFullQueue();
 
     }

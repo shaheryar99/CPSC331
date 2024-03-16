@@ -1,6 +1,10 @@
 /**
- * AsteriodCollision
- */
+* Assignment 2 Exercise 5 - Shaheryar Syed 
+* CPSC 331 
+* UCID: 30052162
+* TA: Harnoor Khehra 
+*/
+
 public class AsteriodCollision {
 
     @SuppressWarnings("unused")
