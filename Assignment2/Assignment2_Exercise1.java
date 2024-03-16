@@ -30,6 +30,7 @@ public class Assignment2_Exercise1 {
         if (start == m) {
             return true;
         }
+        
         isSeen[start] = true;
         for (int next : listPointer[start]) {
             if (!isSeen[next]) {
