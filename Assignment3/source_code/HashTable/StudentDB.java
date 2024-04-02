@@ -1,5 +1,3 @@
-package Assignment3.source_code.HashTable;
-
 import java.util.LinkedList;
 
 public class StudentDB {

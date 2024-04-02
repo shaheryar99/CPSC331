@@ -1,5 +1,3 @@
-package Assignment3.source_code.HashTable;
-
 public class Student {
     int id;
     String studentName;

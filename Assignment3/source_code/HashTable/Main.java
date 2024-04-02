@@ -1,5 +1,3 @@
-package Assignment3.source_code.HashTable;
-
 public class Main {
     public static void main(String[] args) {
         StudentDB main = new StudentDB();
