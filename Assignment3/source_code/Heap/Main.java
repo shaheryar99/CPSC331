@@ -1,15 +1,19 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-Random random = new Random();
+
+        Random random = new Random();
 
         int[] randomArray = random.ints(1000, 0, 1000).toArray();
         int[] sortedArray = new int[1000];
 
-        for (int i = 0; i < sortedArray.length; i++) {
+        for (int i = 0; i < 1000; i++) {
             sortedArray[i] = i;
         }
+
+        /* Heapify Method */
 
         MaxHeapMain heaper = new MaxHeapMain(1000);
         heaper.heapBuilder(randomArray);
@@ -23,35 +27,48 @@ Random random = new Random();
         heaper.heapSort();
         int totalHeapSorted = heaper.getNumberSwaps();
 
+        /* One by One Method */
+
         heaper = new MaxHeapMain(1000);
 
-        for (int i = 0; i < randomArray.length; i++) {
+        /*for (int i = 0; i < randomArray.length; i++) {
             heaper.add(randomArray[i]);
+        }*/
+
+        for (int value : randomArray) {
+            heaper.add(value);
         }
 
         int oneRandom = heaper.getNumberSwaps();
+        heaper.resetSwapCounter();
         heaper.heapSort();
         int totalOneRandom = oneRandom + heaper.getNumberSwaps();
 
         heaper = new MaxHeapMain(1000);
 
-        for (int i = 0; i < randomArray.length; i++) {
+        /*for (int i = 0; i < randomArray.length; i++) {
             heaper.add(sortedArray[i]);
+        }*/
+        for (int value : sortedArray) {
+            heaper.add(value);
         }
 
         int oneSorted = heaper.getNumberSwaps();
+        heaper.resetSwapCounter();
         heaper.heapSort();
         int totalOneSorted = oneSorted + heaper.getNumberSwaps();
 
-        System.out.println(heapRandom);
-        System.out.println(totalHeapRandom);
-        System.out.println(heapSorted);
-        System.out.println(totalHeapSorted);
+        System.out.println("Heapify Creation [RANDOM] - " + heapRandom);
+        System.out.println("Heapify Creation [SORTED] - " + heapSorted);
+        System.out.println("Total Heapify Creation [RANDOM] - " + totalHeapRandom);
+        System.out.println("Total Heapify Creation [SORTED] - " + totalHeapSorted);
 
-        System.out.println(oneRandom);
-        System.out.println(totalOneRandom);
-        System.out.println(oneSorted);
-        System.out.println(totalOneSorted);
+        System.out.println("--");
+
+        System.out.println("One by One Creation [RANDOM] - " + oneRandom);
+        System.out.println("One by One Creation [SORTED] - " + oneSorted);
+        System.out.println("Total One by One Creation [RANDOM] - " + totalOneRandom);
+        System.out.println("TOTAL One by One Creation [SORTED] - " + totalOneSorted);
 
     }
 }

@@ -9,10 +9,6 @@ public class MaxHeapMain {
         this.arraySize = 0;
         this.swapCounter = 0;
     }
-    
-    public String getHi() {
-        return "Hello";
-    }
 
     public int getNumberSwaps() {
         return swapCounter;
@@ -38,7 +34,7 @@ public class MaxHeapMain {
         heapArray[++arraySize] = element;
         int currentElement = arraySize;
 
-        while (heapArray[currentElement] > heapArray[parentNode(currentElement)]) {
+        while (currentElement > 1 && heapArray[currentElement] > heapArray[parentNode(currentElement)]) {
             swap(currentElement, parentNode(currentElement));
             currentElement = parentNode(currentElement);
         }
@@ -53,46 +49,41 @@ public class MaxHeapMain {
     }
 
     public void maxHeaper (int position) {
-        if (position > (arraySize / 2)) {
-            return;
-        }
-
-        int largestElement = position;
-        int leftSide = leftChildNode(position);
-        int rightSide = rightChildNode(position);
-
-        if (largestElement != position) {
-            swap(position, largestElement);
-            maxHeaper(largestElement);
-        }
-
-        if (heapArray[leftSide] > heapArray[largestElement] && leftSide <= arraySize) {
-            largestElement = leftSide;
-        }
-
-        if (heapArray[rightSide] > heapArray[largestElement] && rightSide <= arraySize) {
-            largestElement = rightSide;
+        if (position <= arraySize / 2) {
+            int largest = position;
+            int left = leftChildNode(position);
+            int right = rightChildNode(position);
+    
+            if (left <= arraySize && heapArray[left] > heapArray[largest]) {
+                largest = left;
+            }
+            if (right <= arraySize && heapArray[right] > heapArray[largest]) {
+                largest = right;
+            }
+            if (largest != position) {
+                swap(position, largest);
+                maxHeaper(largest); 
+            }
         }
     }
 
     public void heapBuilder (int[] array) {
         this.arraySize = array.length;
-
+        
         System.arraycopy(array, 0, this.heapArray, 1, array.length);
 
-        for (int position = arraySize / 2; position >= 1; position--) {
-            maxHeaper(position);
+        for (int pos = arraySize / 2; pos >= 1; pos--) {
+            maxHeaper(pos);
         }
     }
 
     public void heapSort() {
-        int size = arraySize;
-        for (int i = size; i > 1; i--) {
+        int tmpsize = arraySize;
+        for (int i = tmpsize; i >= 2; i--) {
             swap(1, i);
-            size--;
+            tmpsize--;
             maxHeaper(1);
         }
-
-        arraySize = size;
+        arraySize = tmpsize;
     }
 }
