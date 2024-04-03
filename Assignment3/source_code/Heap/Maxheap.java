@@ -9,6 +9,14 @@ public class Maxheap {
         this.swapCounter = 0;
     }
 
+    public int getNumberSwaps() {
+        return swapCounter;
+    }
+
+    public void resetSwapCounter() {
+        swapCounter = 0;
+    }
+
     public int parentNode (int position) {
         return position / 2;
     }
@@ -66,7 +74,11 @@ public class Maxheap {
     public void heapBuilder (int[] array) {
         this.arraySize = array.length;
 
-        // Need to copy heap array into new array
+        System.arraycopy(array, 0, this.heapArray, 1, array.length);
+
+        for (int position = arraySize; position >= 1; position--) {
+            maxHeaper(position);
+        }
     }
 
 }
