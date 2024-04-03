@@ -37,6 +37,36 @@ public class Maxheap {
         temp = array[firstElement];
         array[firstElement] = array[secondElement];
         array[secondElement] = temp;
-        swapCounter += 1;
+        swapCounter++;
     }
+
+    public void maxHeaper (int position) {
+        if (position > (arraySize / 2)) {
+            return;
+        }
+
+        int largestElement = position;
+        int leftSide = leftChildNode(position);
+        int rightSide = rightChildNode(position);
+
+        if (largestElement != position) {
+            swap(position, largestElement);
+            maxHeaper(largestElement);
+        }
+
+        if (heapArray[leftSide] > heapArray[largestElement] && leftSide <= arraySize) {
+            largestElement = leftSide;
+        }
+
+        if (heapArray[rightSide] > heapArray[largestElement] && rightSide <= arraySize) {
+            largestElement = rightSide;
+        }
+    }
+
+    public void heapBuilder (int[] array) {
+        this.arraySize = array.length;
+
+        // Need to copy heap array into new array
+    }
+
 }
