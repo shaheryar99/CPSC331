@@ -31,12 +31,8 @@ public class Main {
 
         heaper = new MaxHeapMain(1000);
 
-        /*for (int i = 0; i < randomArray.length; i++) {
-            heaper.add(randomArray[i]);
-        }*/
-
-        for (int value : randomArray) {
-            heaper.add(value);
+        for (int element : randomArray) {
+            heaper.add(element);
         }
 
         int oneRandom = heaper.getNumberSwaps();
@@ -46,11 +42,8 @@ public class Main {
 
         heaper = new MaxHeapMain(1000);
 
-        /*for (int i = 0; i < randomArray.length; i++) {
-            heaper.add(sortedArray[i]);
-        }*/
-        for (int value : sortedArray) {
-            heaper.add(value);
+        for (int element : sortedArray) {
+            heaper.add(element);
         }
 
         int oneSorted = heaper.getNumberSwaps();
