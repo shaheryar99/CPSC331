@@ -15,16 +15,16 @@ public class Main {
         main.insert(20500120, "Bobby");
 
         /* Task 4 & 5 */
-        System.out.println("Task 5, Value associated with ID 20500120 is: " + main.retrieve(20500120) + "\n");
+        System.out.println("Task 5, Value associated with ID 20700200 is: " + main.retrieve(20700200) + "\n");
 
         /* Task 6 */
-        main.delete(20500120);
+        main.delete(20700200);
 
         /* Task 7 */
-        System.out.println("Task 7: "+ main.delete(20500120) + "\n");
+        System.out.println("Task 7: "+ main.delete(20700200) + "\n");
 
         /* Task 8 */
-        System.out.println("Task 8: " + main.retrieve(20500120) + "\n");
+        System.out.println("Task 8: " + main.retrieve(20700200) + "\n");
 
         /* Task 9 */
         System.out.println(main.toString());
