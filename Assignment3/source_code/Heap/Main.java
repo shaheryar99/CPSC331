@@ -1,9 +1,8 @@
 import java.util.Random;
 
 public class Main {
-
     public static void main(String[] args) {
-        Random random = new Random();
+Random random = new Random();
 
         int[] randomArray = random.ints(1000, 0, 1000).toArray();
         int[] sortedArray = new int[1000];
@@ -12,19 +11,19 @@ public class Main {
             sortedArray[i] = i;
         }
 
-        MaxHeaperMain heaper = new MaxHeaperMain(1000);
+        MaxHeapMain heaper = new MaxHeapMain(1000);
         heaper.heapBuilder(randomArray);
         int heapRandom = heaper.getNumberSwaps();
         heaper.heapSort();
         int totalHeapRandom = heaper.getNumberSwaps();
 
-        heaper = new MaxHeaperMain(1000);
+        heaper = new MaxHeapMain(1000);
         heaper.heapBuilder(sortedArray);
         int heapSorted = heaper.getNumberSwaps();
         heaper.heapSort();
         int totalHeapSorted = heaper.getNumberSwaps();
 
-        heaper = new MaxHeaperMain(1000);
+        heaper = new MaxHeapMain(1000);
 
         for (int i = 0; i < randomArray.length; i++) {
             heaper.add(randomArray[i]);
@@ -34,7 +33,7 @@ public class Main {
         heaper.heapSort();
         int totalOneRandom = oneRandom + heaper.getNumberSwaps();
 
-        heaper = new MaxHeaperMain(1000);
+        heaper = new MaxHeapMain(1000);
 
         for (int i = 0; i < randomArray.length; i++) {
             heaper.add(sortedArray[i]);

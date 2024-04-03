@@ -1,12 +1,17 @@
-public class MaxHeaperMain {
+public class MaxHeapMain {
+
     public int[] heapArray;
     public int arraySize;
     public int swapCounter;
 
-    public MaxHeaperMain(int size) {
+    public MaxHeapMain(int size) {
         this.heapArray = new int[size + 1];
         this.arraySize = 0;
         this.swapCounter = 0;
+    }
+    
+    public String getHi() {
+        return "Hello";
     }
 
     public int getNumberSwaps() {
@@ -38,7 +43,6 @@ public class MaxHeaperMain {
             currentElement = parentNode(currentElement);
         }
     }
-
     public void swap (int firstElement, int secondElement) {
         int temp;
         int[] array = this.heapArray;
@@ -91,5 +95,4 @@ public class MaxHeaperMain {
 
         arraySize = size;
     }
-
 }
