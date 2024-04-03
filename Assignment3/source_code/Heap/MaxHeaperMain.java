@@ -1,9 +1,9 @@
-public class Maxheap {
+public class MaxHeaperMain {
     public int[] heapArray;
     public int arraySize;
     public int swapCounter;
 
-    public Maxheap(int size) {
+    public MaxHeaperMain(int size) {
         this.heapArray = new int[size + 1];
         this.arraySize = 0;
         this.swapCounter = 0;
@@ -76,9 +76,20 @@ public class Maxheap {
 
         System.arraycopy(array, 0, this.heapArray, 1, array.length);
 
-        for (int position = arraySize; position >= 1; position--) {
+        for (int position = arraySize / 2; position >= 1; position--) {
             maxHeaper(position);
         }
+    }
+
+    public void heapSort() {
+        int size = arraySize;
+        for (int i = size; i > 1; i--) {
+            swap(1, i);
+            size--;
+            maxHeaper(1);
+        }
+
+        arraySize = size;
     }
 
 }
