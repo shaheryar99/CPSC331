@@ -1,13 +1,13 @@
 import java.util.Random;
 
-public class MaxHeap {
+public class Main {
     private int[] Heap; // Array to store heap elements
     private int size;
     private int maxsize;
     private int createCounter;
     private int sortCounter;
 
-    public MaxHeap(int maxsize) {
+    public Main(int maxsize) {
         this.maxsize = maxsize;
         this.size = 0;
         this.createCounter = 0;
@@ -89,17 +89,6 @@ public class MaxHeap {
         }
     }
 
-    // Removes and returns the maximum element from the heap
-    public int remove() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Heap is empty");
-        }
-        int popped = Heap[1];
-        Heap[1] = Heap[size--];
-        maxHeapify(1);
-        return popped;
-    }
-
     public void heapBuilder (int[] array) {
         this.size = array.length;
         
@@ -148,20 +137,20 @@ public class MaxHeap {
         }
 
         /* Heap methods */
-        MaxHeap heap = new MaxHeap(1000);
+        Main heap = new Main(1000);
         heap.heapBuilder(randomArray);
         int createHeapRandom = heap.getCreateCounter();
         heap.heapSort();
         int totalHeapRandom = heap.getSortCounter();
 
-        heap = new MaxHeap((1000));
+        heap = new Main((1000));
         heap.heapBuilder(sortedArray);
         int createHeapSorted = heap.getCreateCounter();
         heap.heapSort();
         int totalHeapSorted = heap.getSortCounter();
 
         /* One by One Methods */
-        heap = new MaxHeap(1000);
+        heap = new Main(1000);
         for (int element : randomArray) {
             heap.insert(element);
         }
@@ -169,7 +158,7 @@ public class MaxHeap {
         heap.heapSort();
         int totalOneRandom = heap.getSortCounter();
 
-        heap = new MaxHeap(1000);
+        heap = new Main(1000);
         for(int element1 : sortedArray) {
             heap.insert(element1);
         }
