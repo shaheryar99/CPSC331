@@ -1,3 +1,10 @@
+/* Shaheryar Syed
+ * TA: Harnoor K.
+ * UCID: 30052162
+ * Question 3 - Heap 
+ * REF - TA Tutorial Code: https://d2l.ucalgary.ca/d2l/le/content/569171/Home?itemIdentifier=D2L.LE.Content.ContentObject.ModuleCO-6296990
+ */
+
 import java.util.Random;
 
 public class Main {
@@ -168,16 +175,16 @@ public class Main {
 
         System.out.println("Heapify Creation [RANDOM] - " + createHeapRandom);
         System.out.println("Heapify Creation [SORTED] - " + createHeapSorted);
-        System.out.println("Total Heapify Creation [RANDOM] - " + (totalHeapRandom));
-        System.out.println("Total Heapify Creation [SORTED] - " + (totalHeapSorted));
+        System.out.println("One by One Creation [RANDOM] - " + oneRandom);
+        System.out.println("One by One Creation [SORTED] - " + oneSorted);
 
         System.out.println("--");
 
-        System.out.println("One by One Creation [RANDOM] - " + oneRandom);
-        System.out.println("One by One Creation [SORTED] - " + oneSorted);
-        System.out.println("Total One by One Creation [RANDOM] - " + (totalOneRandom));
+        System.out.println("Total Heapify [RANDOM] - " + (totalHeapRandom));
+        System.out.println("Total Heapify [SORTED] - " + (totalHeapSorted));
+        System.out.println("Total One by One [RANDOM] - " + (totalOneRandom));
         // Total one creation for the sorted array does not count the initial "oneSorted" 
-        //amount so we must add that, it also counts the array size in the calculation so we must remove that (-1000)
-        System.out.println("Total One by One Creation [SORTED] - " + (totalOneSorted + oneSorted - 1000));
+        // amount so we must add that, it also counts the array size in the calculation so we must remove that (-1000)
+        System.out.println("Total One by One [SORTED] - " + (totalOneSorted + oneSorted - 1000));
     }
 }

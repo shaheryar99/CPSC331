@@ -1,3 +1,10 @@
+/* Shaheryar Syed
+ * TA: Harnoor K.
+ * UCID: 30052162
+ * Question 2 - HashTable 
+ * REF - TA Tutorial Code: https://d2l.ucalgary.ca/d2l/le/content/569171/Home?itemIdentifier=D2L.LE.Content.ContentObject.ModuleCO-6296990
+ */
+
 import java.util.LinkedList;
 
 public class StudentDB {

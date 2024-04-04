@@ -1,3 +1,9 @@
+/* Shaheryar Syed
+ * TA: Harnoor K.
+ * UCID: 30052162
+ * Question 2 - HashTable 
+ */
+
 public class Main {
     public static void main(String[] args) {
         StudentDB main = new StudentDB();
