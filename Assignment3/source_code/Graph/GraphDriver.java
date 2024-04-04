@@ -28,11 +28,25 @@ public class GraphDriver {
     public void algorithmDij(int startLocation) {
         int[] weights = new int[vertex];
         int[] nodes = new int[vertex];
-        boolean[] visisted = new boolean[vertex];
+        boolean[] visited = new boolean[vertex];
 
         Arrays.fill(weights, Integer.MAX_VALUE);
         Arrays.fill(nodes, -1);
         weights[startLocation] = 0;
 
+        for(int i = 0; i < vertex - 1; i++) {
+            int minimum = minDistance(weights, visited);
+            visited[minimum] = true;
+
+            for(int j = 0; j < vertex; j++) {
+                if (!visited[j] && mainArray[minimum][j] != 0 && weights[minimum] != Integer.MAX_VALUE && weights[minimum] + mainArray[minimum][j] < weights[j]) {
+                    nodes[j] = minimum;
+                    weights[j] = weights[minimum] + mainArray[minimum][j];
+                }
+            }
+        }
+
     }
+
+    
 }
