@@ -1,3 +1,9 @@
+/* Shaheryar Syed
+ * TA: Harnoor K.
+ * UCID: 30052162
+ * Question 4 - Graphs
+ */
+
 import java.util.Scanner;
 
 public class Main {
