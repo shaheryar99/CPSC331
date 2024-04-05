@@ -54,22 +54,28 @@ public class GraphDriver {
             System.out.print("Delivery Location " + vertexIndex + " - Shortest Route: ");
 
             if(weights[vertexIndex] != Integer.MAX_VALUE) {
-                pathways(vertexIndex, nodes);
+                pathways(vertexIndex, nodes, true);
                 System.out.println(", Distance: " + weights[vertexIndex]);
             }
             else {
-                System.out.println("No route exists, Distance: Infinity (Location " + vertexIndex + " is unreachable from the central warehouse");
+                System.out.println("No route exists, Distance: Infinity (Location " + vertexIndex + " is unreachable from the central warehouse)");
             }
         }
     }
 
-    public void pathways(int current, int[] nodes) {
+    public void pathways(int current, int[] nodes, boolean last) {
         if (current == -1) {
             return;
         }
 
-        pathways(nodes[current], nodes);
-        System.out.println(current + (current == nodes[current] ? "" : "->"));
+        pathways(nodes[current], nodes, false);
+
+        if(last) {
+            System.out.print(current);
+        }
+        else {
+            System.out.print(current + " -> ");
+        }
 
     }
 
